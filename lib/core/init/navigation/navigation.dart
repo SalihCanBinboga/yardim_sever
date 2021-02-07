@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:yardim_sever/core/init/bindings/host_page_bindings.dart';
 import 'package:yardim_sever/core/init/bindings/start_bindings.dart';
 import 'package:yardim_sever/view/authentication/login/login_screen.dart';
 import 'package:yardim_sever/view/authentication/register/register_screen.dart';
@@ -17,6 +18,6 @@ class Navigation {
     GetPage(name: NavigationConstants.WELCOME, page: () => WelcomeScreen(), transition: Transition.noTransition),
     GetPage(name: NavigationConstants.LOGIN, page: () => LoginScreen(), transition: Transition.noTransition),
     GetPage(name: NavigationConstants.REGISTER, page: () => RegisterScreen(), transition: Transition.noTransition),
-    GetPage(name: NavigationConstants.HOST, page: () => HostScreen(), transition: Transition.noTransition),
+    GetPage(name: NavigationConstants.HOST, page: () => HostScreen(), transition: Transition.noTransition,binding: HostPageBindings()),
   ];
 }
