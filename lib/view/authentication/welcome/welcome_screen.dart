@@ -38,7 +38,7 @@ class WelcomeScreen extends StatelessWidget {
           SizedBox(height: 32),
           ReusableButton(
             title: 'Kayıt Ol',
-            onClick: () => Get.toNamed(NavigationConstants.LOGIN),
+            onClick: () => Get.toNamed(NavigationConstants.REGISTER),
           ),
         ],
       ),
