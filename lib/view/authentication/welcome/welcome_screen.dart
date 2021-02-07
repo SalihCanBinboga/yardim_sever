@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:yardim_sever/core/constants/colors/yardim_sever.dart';
 import 'package:yardim_sever/core/constants/navigation/navigation_constants.dart';
+import 'package:yardim_sever/view/widgets/reusable_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
@@ -30,26 +31,14 @@ class WelcomeScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: 32),
-          SizedBox(
-            width: Get.width * .7,
-            height: 45,
-            child: RaisedButton(
-              onPressed: () => Get.toNamed(NavigationConstants.LOGIN),
-              child: Text('Giriş Yap', style: TextStyle(color: Colors.white, fontSize: Get.width * .07)),
-              color: YardimSever.primaryLightBlue,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(28))),
-            ),
+          ReusableButton(
+            title: 'Giriş Yap',
+            onClick: () => Get.toNamed(NavigationConstants.LOGIN),
           ),
           SizedBox(height: 32),
-          SizedBox(
-            width: Get.width * .7,
-            height: 45,
-            child: RaisedButton(
-              onPressed: () => Get.toNamed(NavigationConstants.REGISTER),
-              child: Text('Kayıt Ol', style: TextStyle(color: Colors.white, fontSize: Get.width * .07)),
-              color: YardimSever.primaryLightBlue,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(28))),
-            ),
+          ReusableButton(
+            title: 'Kayıt Ol',
+            onClick: () => Get.toNamed(NavigationConstants.LOGIN),
           ),
         ],
       ),
