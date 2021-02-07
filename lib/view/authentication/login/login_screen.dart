@@ -98,8 +98,7 @@ class LoginScreen extends GetView<AuthenticationViewModel> {
   }
 
   void clickLogin() {
-    // todo empty controller yapılacak
-    Get.offNamed(NavigationConstants.HOST);
+    controller.loginUser(email: _mailField.value.text, password: _passwordField.value.text);
   }
 
   void clickForgetPassword() {}

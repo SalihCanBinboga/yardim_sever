@@ -3,12 +3,18 @@ class UserModel {
   String _userEmail;
   String _userPassword;
 
-  UserModel(this._userName, this._userEmail);
+  UserModel(this._userName, this._userEmail, this._userPassword);
+
+  UserModel.forLogin(this._userEmail, this._userPassword);
 
   UserModel.fromMap(Map<String, dynamic> map) {
     userName = map['userEmail'];
     userEmail = map['userEmail'];
     userPassword = map['userPassword'];
+  }
+
+  Map<String, dynamic> toMap() {
+    return {'userName': userName, 'userEmail': userEmail, 'userPassword': userPassword};
   }
 
   String get userName => _userName;
@@ -21,10 +27,6 @@ class UserModel {
 
   set userEmail(String value) {
     _userEmail = value;
-  }
-
-  Map<String, dynamic> toMap() {
-    return {'userName': userName, 'userEmail': userEmail, 'userPassword': userPassword};
   }
 
   String get userPassword => _userPassword;

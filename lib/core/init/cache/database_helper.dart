@@ -56,9 +56,9 @@ class DatabaseHelper {
     return result;
   }
 
-  Future<UserModel> getUser() async {
+  Future<UserModel> getUser(UserModel user) async {
     Database db = await _getDatabase();
-    List<Map<String, dynamic>> result = await db.rawQuery('SELECT userName, userEmail, userPassword FROM User');
+    List<Map<String, dynamic>> result = await db.rawQuery("SELECT userName, userEmail, userPassword FROM User WHERE userEmail = '${user.userEmail}' AND userPassword = '${user.userPassword}'");
     return UserModel.fromMap(result[0]);
   }
 
