@@ -9,7 +9,7 @@ class SplashScreenViewModel extends GetxController {
   }
 
   void startTimeout() async {
-    Future.delayed(Duration(seconds: 3));
-    Get.toNamed(NavigationConstants.WELCOME);
+    await Future.delayed(Duration(seconds: 3));
+    Get.offNamed(NavigationConstants.WELCOME);
   }
 }
