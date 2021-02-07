@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:yardim_sever/core/constants/colors/yardim_sever.dart';
-
 import 'core/constants/navigation/navigation_constants.dart';
 import 'core/init/navigation/navigation.dart';
 
