@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:yardim_sever/core/constants/colors/yardim_sever.dart';
+import 'package:yardim_sever/core/constants/navigation/navigation_constants.dart';
 import 'package:yardim_sever/view/widgets/reusable_button.dart';
 import 'package:yardim_sever/view/widgets/reusable_textfield.dart';
 
@@ -96,7 +97,10 @@ class LoginScreen extends GetView<AuthenticationViewModel> {
     );
   }
 
-  void clickLogin() {}
+  void clickLogin() {
+    // todo empty controller yapılacak
+    Get.offNamed(NavigationConstants.HOST);
+  }
 
   void clickForgetPassword() {}
 }

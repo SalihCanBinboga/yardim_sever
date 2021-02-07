@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:yardim_sever/core/constants/colors/yardim_sever.dart';
+import 'package:yardim_sever/core/constants/navigation/navigation_constants.dart';
 import 'package:yardim_sever/view/widgets/reusable_button.dart';
 import 'package:yardim_sever/view/widgets/reusable_textfield.dart';
 
@@ -75,7 +76,7 @@ class RegisterScreen extends GetView<AuthenticationViewModel> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              IconButton(icon: Icon(Icons.arrow_back,color: Colors.white), onPressed: Get.back),
+              IconButton(icon: Icon(Icons.arrow_back, color: Colors.white), onPressed: Get.back),
               SizedBox(width: 16),
               Text(
                 'Kayıt Ol',
@@ -88,7 +89,10 @@ class RegisterScreen extends GetView<AuthenticationViewModel> {
     );
   }
 
-  void clickRegister() {}
+  void clickRegister() {
+    // todo empty controller yapılacak
+    Get.offNamed(NavigationConstants.HOST);
+  }
 
   void clickForgetPassword() {}
 }
