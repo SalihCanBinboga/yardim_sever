@@ -90,8 +90,7 @@ class RegisterScreen extends GetView<AuthenticationViewModel> {
   }
 
   void clickRegister() {
-    // todo empty controller yapılacak
-    Get.offNamed(NavigationConstants.HOST);
+    controller.registerUser(name: _nameField.value.text, email: _mailField.value.text, password: _passwordField.value.text);
   }
 
   void clickForgetPassword() {}
