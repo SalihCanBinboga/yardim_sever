@@ -79,10 +79,17 @@ class LoginScreen extends GetView<AuthenticationViewModel> {
           ),
         ),
         child: Padding(
-          padding: EdgeInsets.only(top: Get.height * .07, left: Get.width * .05),
-          child: Text(
-            'Giriş Yap',
-            style: TextStyle(color: Colors.white, fontSize: Get.width * .1, fontWeight: FontWeight.bold),
+          padding: EdgeInsets.only(top: Get.height * .07, left: Get.width * .02),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconButton(icon: Icon(Icons.arrow_back,color: Colors.white), onPressed: Get.back),
+              SizedBox(width: 16),
+              Text(
+                'Giriş Yap',
+                style: TextStyle(color: Colors.white, fontSize: Get.width * .1, fontWeight: FontWeight.bold),
+              ),
+            ],
           ),
         ),
       ),
