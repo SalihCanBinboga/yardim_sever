@@ -5,4 +5,5 @@ class YardimSever {
 
   static const Color primaryLightBlue = Color(0xFF6E78F7);
   static const Color grey = Color(0xFF898A8F);
+  static const Color whiteBlur = Color(0xFFF5F5F5);
 }

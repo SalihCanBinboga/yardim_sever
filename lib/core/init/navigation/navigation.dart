@@ -10,14 +10,16 @@ import '../../constants/navigation/navigation_constants.dart';
 
 class Navigation {
   static Navigation _instance;
+
   static Navigation get instance => _instance ??= Navigation._init();
+
   Navigation._init();
 
   List<GetPage> navigationList = [
-    GetPage(name: NavigationConstants.SPLASH, page: () => SplashScreen(), transition: Transition.noTransition,binding: StartBindings()),
+    GetPage(name: NavigationConstants.SPLASH, page: () => SplashScreen(), transition: Transition.noTransition, binding: StartBindings()),
     GetPage(name: NavigationConstants.WELCOME, page: () => WelcomeScreen(), transition: Transition.noTransition),
     GetPage(name: NavigationConstants.LOGIN, page: () => LoginScreen(), transition: Transition.noTransition),
     GetPage(name: NavigationConstants.REGISTER, page: () => RegisterScreen(), transition: Transition.noTransition),
-    GetPage(name: NavigationConstants.HOST, page: () => HostScreen(), transition: Transition.noTransition,binding: HostPageBindings()),
+    GetPage(name: NavigationConstants.HOST, page: () => HostScreen(), transition: Transition.noTransition, binding: HostPageBindings()),
   ];
 }
